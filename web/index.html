@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Reference default. connect-src 'self' keeps fetches on this origin;
+       'wasm-unsafe-eval' lets the page compile its own WebAssembly module;
+       form-action 'none' blocks form posts. A meta policy cannot stop data
+       leaving by navigation, so the browser check still watches requests. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; connect-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Lowballer</title>
+  <meta name="description" content="A 2D browser game about lowballing sellers on a neighbourhood marketplace: read the listing, peek at a profile or message the seller, and offer as little as they'll take.">
+  <link rel="icon" href="art/icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-ready="false" data-phase="loading">
+  <header class="topbar" id="topbar">
+    <div class="topbar-in">
+      <div class="brand"><img class="brand-mark" src="art/icon.png" alt=""><span id="brand"></span><span class="brand-tag" id="brand-tag"></span></div>
+      <div class="status" id="status">
+        <span class="chip" id="screen"></span>
+        <span class="saved"><span id="saved-label"></span> <b id="saved"></b></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="title-screen" class="title-screen" hidden>
+      <img class="title-art" src="art/title.png" id="title-art" alt="">
+      <div class="title-card">
+        <h1 id="title-name"></h1>
+        <p class="tagline" id="title-tagline"></p>
+        <ol class="how" id="title-how"></ol>
+        <button type="button" class="primary big" id="start"></button>
+      </div>
+    </section>
+
+    <section id="browse" hidden>
+      <div class="brief">
+        <div class="brief-text">
+          <h1 id="browse-heading"></h1>
+          <p id="browse-how"></p>
+        </div>
+        <div class="meters" id="meters"></div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section id="summary" class="panel" hidden>
+      <h1 id="summary-title"></h1>
+      <ol class="rows" id="rows"></ol>
+      <div class="total"><span id="total-label"></span><b id="total"></b></div>
+      <button type="button" class="primary big" id="next"></button>
+    </section>
+
+    <section id="final" class="final" hidden>
+      <img class="final-art" src="art/final.png" id="final-art" alt="">
+      <div class="panel final-card">
+        <p class="eyebrow" id="final-eyebrow"></p>
+        <p class="pct" id="final-pct"></p>
+        <p class="final-line" id="final-line"></p>
+        <p class="rank"><b id="final-rank"></b> <span id="final-rank-line"></span></p>
+        <dl class="stats" id="final-stats"></dl>
+        <dl class="stats rounds" id="final-rounds"></dl>
+        <button type="button" class="primary big" id="again"></button>
+      </div>
+    </section>
+
+    <p id="message" class="message" role="status"></p>
+  </main>
+
+  <dialog id="detail" class="detail"></dialog>
+
+  <noscript><p>This game needs JavaScript and WebAssembly.</p></noscript>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

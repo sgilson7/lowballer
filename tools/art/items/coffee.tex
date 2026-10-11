@@ -1,0 +1,81 @@
+\documentclass[tikz,border=0pt]{standalone}
+\usepackage{xcolor}
+\usetikzlibrary{calc}
+% Palette: Sam_Comm_final.png by eye (vagrancy repository).
+\definecolor{ink}{HTML}{3B2340}
+\definecolor{dark}{HTML}{4A3357}
+\definecolor{darkhi}{HTML}{5E4A6E}
+\definecolor{sky}{HTML}{EFC46A}
+\definecolor{skyhi}{HTML}{F5DA92}
+\definecolor{skylow}{HTML}{E9B060}
+\definecolor{cloud}{HTML}{F2D58A}
+\definecolor{wallA}{HTML}{E88A73}
+\definecolor{wallB}{HTML}{EE9F7E}
+\definecolor{wallC}{HTML}{E47A7E}
+\definecolor{wallD}{HTML}{F0B07E}
+\definecolor{wallE}{HTML}{D9765F}
+\definecolor{wallF}{HTML}{E99A8A}
+\definecolor{greenA}{HTML}{8DBB7E}
+\definecolor{greenB}{HTML}{6FA77A}
+\definecolor{greenC}{HTML}{A9C97F}
+\definecolor{greenD}{HTML}{5E9C6A}
+\definecolor{window}{HTML}{F6E7A0}
+\definecolor{windark}{HTML}{8C5A64}
+\definecolor{plum}{HTML}{8A5A9E}
+\definecolor{plumhi}{HTML}{A77BB8}
+\definecolor{lilac}{HTML}{D9C3E0}
+\definecolor{coral}{HTML}{E47A7E}
+\definecolor{coraldk}{HTML}{C85F65}
+\definecolor{orange}{HTML}{F26B38}
+\definecolor{salmon}{HTML}{F4BE9C}
+\definecolor{gold}{HTML}{F2B53A}
+\definecolor{golddk}{HTML}{D9962A}
+\definecolor{butter}{HTML}{F5DA92}
+\definecolor{cream}{HTML}{FFF4E0}
+\definecolor{paper}{HTML}{F6E7C4}
+\definecolor{sage}{HTML}{8DBB7E}
+\definecolor{sagedk}{HTML}{6FA77A}
+\definecolor{forest}{HTML}{5E9C6A}
+\definecolor{mint}{HTML}{C5E0B4}
+\definecolor{teal}{HTML}{5FA8A0}
+\definecolor{glass}{HTML}{A9D3C9}
+\definecolor{glassdk}{HTML}{7FB7B0}
+\definecolor{pink}{HTML}{F2A7B5}
+\definecolor{rosewall}{HTML}{F3B7A8}
+\definecolor{steel}{HTML}{C8C2B4}
+\definecolor{steeldk}{HTML}{8D9A93}
+\definecolor{metal}{HTML}{8D9A93}
+\definecolor{wood}{HTML}{B9835A}
+\definecolor{wooddk}{HTML}{8E5E3C}
+\definecolor{tan}{HTML}{E2BD8C}
+\definecolor{paving}{HTML}{E2BD8C}
+\definecolor{ground}{HTML}{D3A77D}
+% One ink for every outline.
+\newcommand{\Ink}{1.3pt}
+\tikzset{inked/.style={draw=ink, line width=\Ink, line join=round, line cap=round}}
+% Picture units: 0.4 mm, y counted downward (hence the negative y unit).
+\tikzset{x=0.4mm, y=-0.4mm}
+\begin{document}
+\begin{tikzpicture}
+\clip (0,0) rectangle (240,180);
+% background: wall, floor, blob, confetti
+\fill[sky] (0,0) rectangle (240,180);
+\filldraw[inked,fill=skyhi] (64,34) .. controls (102,10) and (178,22) .. (204,64) .. controls (228,106) and (194,158) .. (134,160) .. controls (82,162) and (28,148) .. (28,100) .. controls (28,68) and (40,48) .. (64,34) -- cycle;
+\filldraw[inked,fill=sage] (31.21,121.69) circle [radius=7];
+\draw[ink, line width=2.4pt, line cap=round, line join=round] (211.36,126.93) -- (219.36,116.93) -- (227.36,126.93) -- (235.36,116.93);
+\filldraw[inked,fill=pink] (207.89,44.08) -- (217.89,26.08) -- (227.89,44.08) -- cycle;
+\foreach \dx in {0,9,18} \fill[teal] (17.9+\dx,35.15) circle [radius=2.6];
+\fill[wood] (0,150) rectangle (240,180);
+\draw[ink, line width=1.3pt, line cap=round, line join=round] (0,150) -- (240,150);
+\fill[ink, opacity=0.18] (120,160) ellipse [x radius=78, y radius=6];
+% the item
+\draw[steel, line width=3pt, line cap=round, line join=round] (112,30) .. controls (108,24.67) and (108,19.33) .. (112,14) .. controls (116,8.67) and (116,3.33) .. (112,-2) (128,30) .. controls (124,24.67) and (124,19.33) .. (128,14) .. controls (132,8.67) and (132,3.33) .. (128,-2);
+\filldraw[inked,fill=dark,rounded corners=4mm] (80,44) rectangle (160,156);
+\filldraw[inked,fill=darkhi,rounded corners=3.6mm] (72,36) rectangle (168,62);
+\filldraw[inked,fill=ink,rounded corners=2.4mm] (88,72) rectangle (152,148);
+\filldraw[inked,fill=glass] (98,96) -- (138,96) -- (142,142) .. controls (127.33,147.33) and (112.67,147.33) .. (98,142) -- cycle;
+\filldraw[inked,fill=wood] (98,116) -- (140,116) -- (141,140) .. controls (127,145.33) and (113,145.33) .. (99,140) -- cycle;
+\draw[glass, line width=5pt, line cap=round, line join=round] (140,104) .. controls (150.67,105.33) and (155.33,110.67) .. (154,120) .. controls (152.67,128) and (148.33,132) .. (141,132);
+\filldraw[inked,fill=coral] (150,49) circle [radius=4];
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,36 @@
+{
+  "names": ["Dana R.", "Marcus T.", "Priya S.", "Jordan K.", "Linda M.", "Theo B.", "Keisha W.", "Gary P.", "Sofia L.", "Ray D.", "Mei C.", "Hank O.", "Tasha G.", "Owen F.", "Rosa V.", "Derek H.", "Imani J.", "Phil N.", "Nadia A.", "Cody E.", "Bev S.", "Luis Q.", "Hannah Y.", "Walt Z.", "Aisha B.", "Trent C.", "June P.", "Sam I."],
+  "colours": ["coral", "sage", "ochre", "rose", "teal", "plum"],
+  "tone_phrases": [
+    ["Price is firm.", "Firm on price.", "FIRM.", "Price is not negotiable.", "The price is the price."],
+    ["", "", "Asking price is listed.", "Cash or Venmo."],
+    ["OBO.", "Or best offer.", "Price negotiable.", "Open to reasonable offers."],
+    ["Offers accepted!", "Make an offer!", "Will consider all offers.", "Priced to sell, open to offers."]
+  ],
+  "closers": {
+    "stubborn": ["No lowballers. I know what I have.", "Serious buyers only.", "If it's listed, it's available. Don't ask.", "Cash only, pickup only, no holds.", "Not in a rush to sell.", "Please don't waste my time."],
+    "steady": ["Pickup only.", "Message me with any questions.", "Smoke-free home.", "Can meet at the library parking lot.", "Available evenings and weekends."],
+    "flexible": ["Moving soon, need this gone!", "Just clearing out the garage :)", "Make me an offer, seriously.", "Need it out of my place this week!!", "Can drop it off if you're close!"]
+  },
+  "bios": {
+    "stubborn": ["I sell quality items at fair prices. Read the listing before messaging.", "Collector. I price things right the first time.", "No trades and no games. The price is the price.", "Reseller since 2015. I know the market."],
+    "steady": ["Just selling stuff I don't use anymore.", "Weekend declutterer. Usually around after 5pm.", "Teacher by day, garage cleaner by weekend.", "Happy to answer questions."],
+    "flexible": ["Moving across the country in two weeks, everything must go!", "Downsizing! Make me an offer on anything.", "Grad student, I need the space more than the money lol", "Just want things to go to a good home :)"]
+  },
+  "reviews": {
+    "stubborn": ["Item as described. Would not negotiate at all.", "Fair item, but they countered my offer with full price.", "Quick sale. No haggling, which they made very clear.", "Great condition. Price was firm and they meant it."],
+    "steady": ["Friendly and on time. Knocked a little off the price.", "Smooth pickup. Met me partway on price.", "Good communication, item as described.", "Took a small discount for cash."],
+    "flexible": ["Super easy, took my first offer!", "Very generous, basically gave it to me.", "Accepted way less than asking. Nice person.", "Sold it to me for a steal. Would buy again."]
+  },
+  "responds": {
+    "stubborn": ["Usually responds within a day", "Usually responds within a few days"],
+    "steady": ["Usually responds within a few hours", "Usually responds within an hour"],
+    "flexible": ["Usually responds within minutes", "Very responsive"]
+  },
+  "replies": {
+    "stubborn": ["Lowest I'll go is {counter}, and that's generous.", "I could maybe do {counter}. Not a dollar less.", "It's available. {counter} cash and it's yours, final answer."],
+    "steady": ["Still available! I could probably do {counter}.", "Yep, still have it. I'd take {counter} if you can pick it up this week.", "Hi! Yes. {counter} is about as low as I'd like to go."],
+    "flexible": ["Yes!! Honestly I'd do {counter}, I just need it gone.", "Still here! {counter} works, or make me an offer.", "Yeah it's available. {counter}? Open to offers tho, just want it out of here."]
+  },
+  "firm_replies": ["Yes it's available. Price is firm.", "Available. Not taking offers, sorry.", "Price is as listed.", "If I wanted less I would have listed it for less."]
+}

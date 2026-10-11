@@ -1,0 +1,85 @@
+\documentclass[tikz,border=0pt]{standalone}
+\usepackage{xcolor}
+\usetikzlibrary{calc}
+% Palette: Sam_Comm_final.png by eye (vagrancy repository).
+\definecolor{ink}{HTML}{3B2340}
+\definecolor{dark}{HTML}{4A3357}
+\definecolor{darkhi}{HTML}{5E4A6E}
+\definecolor{sky}{HTML}{EFC46A}
+\definecolor{skyhi}{HTML}{F5DA92}
+\definecolor{skylow}{HTML}{E9B060}
+\definecolor{cloud}{HTML}{F2D58A}
+\definecolor{wallA}{HTML}{E88A73}
+\definecolor{wallB}{HTML}{EE9F7E}
+\definecolor{wallC}{HTML}{E47A7E}
+\definecolor{wallD}{HTML}{F0B07E}
+\definecolor{wallE}{HTML}{D9765F}
+\definecolor{wallF}{HTML}{E99A8A}
+\definecolor{greenA}{HTML}{8DBB7E}
+\definecolor{greenB}{HTML}{6FA77A}
+\definecolor{greenC}{HTML}{A9C97F}
+\definecolor{greenD}{HTML}{5E9C6A}
+\definecolor{window}{HTML}{F6E7A0}
+\definecolor{windark}{HTML}{8C5A64}
+\definecolor{plum}{HTML}{8A5A9E}
+\definecolor{plumhi}{HTML}{A77BB8}
+\definecolor{lilac}{HTML}{D9C3E0}
+\definecolor{coral}{HTML}{E47A7E}
+\definecolor{coraldk}{HTML}{C85F65}
+\definecolor{orange}{HTML}{F26B38}
+\definecolor{salmon}{HTML}{F4BE9C}
+\definecolor{gold}{HTML}{F2B53A}
+\definecolor{golddk}{HTML}{D9962A}
+\definecolor{butter}{HTML}{F5DA92}
+\definecolor{cream}{HTML}{FFF4E0}
+\definecolor{paper}{HTML}{F6E7C4}
+\definecolor{sage}{HTML}{8DBB7E}
+\definecolor{sagedk}{HTML}{6FA77A}
+\definecolor{forest}{HTML}{5E9C6A}
+\definecolor{mint}{HTML}{C5E0B4}
+\definecolor{teal}{HTML}{5FA8A0}
+\definecolor{glass}{HTML}{A9D3C9}
+\definecolor{glassdk}{HTML}{7FB7B0}
+\definecolor{pink}{HTML}{F2A7B5}
+\definecolor{rosewall}{HTML}{F3B7A8}
+\definecolor{steel}{HTML}{C8C2B4}
+\definecolor{steeldk}{HTML}{8D9A93}
+\definecolor{metal}{HTML}{8D9A93}
+\definecolor{wood}{HTML}{B9835A}
+\definecolor{wooddk}{HTML}{8E5E3C}
+\definecolor{tan}{HTML}{E2BD8C}
+\definecolor{paving}{HTML}{E2BD8C}
+\definecolor{ground}{HTML}{D3A77D}
+% One ink for every outline.
+\newcommand{\Ink}{1.3pt}
+\tikzset{inked/.style={draw=ink, line width=\Ink, line join=round, line cap=round}}
+% Picture units: 0.4 mm, y counted downward (hence the negative y unit).
+\tikzset{x=0.4mm, y=-0.4mm}
+\begin{document}
+\begin{tikzpicture}
+\clip (0,0) rectangle (240,180);
+% background: wall, floor, blob, confetti
+\fill[salmon] (0,0) rectangle (240,180);
+\filldraw[inked,fill=wallD] (120,22) .. controls (170,18) and (210,48) .. (210,92) .. controls (210,140) and (168,162) .. (118,160) .. controls (68,158) and (30,134) .. (32,90) .. controls (34,46) and (72,26) .. (120,22) -- cycle;
+\filldraw[inked,fill=teal] (205.28,130.5) circle [radius=7];
+\draw[ink, line width=2.4pt, line cap=round, line join=round] (15.04,127.25) -- (23.04,117.25) -- (31.04,127.25) -- (39.04,117.25);
+\filldraw[inked,fill=sage] (196.97,34.5) -- (206.97,16.5) -- (216.97,34.5) -- cycle;
+\foreach \dx in {0,9,18} \fill[teal] (20.28+\dx,31.32) circle [radius=2.6];
+\fill[wood] (0,150) rectangle (240,180);
+\draw[ink, line width=1.3pt, line cap=round, line join=round] (0,150) -- (240,150);
+\fill[ink, opacity=0.18] (120,160) ellipse [x radius=78, y radius=6];
+% the item
+\filldraw[inked,fill=coral,rounded corners=1.6mm] (28,56) rectangle (38,156);
+\filldraw[inked,fill=coral,rounded corners=1.6mm] (28,104) rectangle (68,114);
+\filldraw[inked,fill=coral] (58,110) rectangle (66,156);
+\filldraw[inked,fill=coral,rounded corners=1.6mm] (202,56) rectangle (212,156);
+\filldraw[inked,fill=coral,rounded corners=1.6mm] (172,104) rectangle (212,114);
+\filldraw[inked,fill=coral] (174,110) rectangle (182,156);
+\filldraw[inked,fill=wood,rounded corners=1.6mm] (54,80) rectangle (186,93);
+\filldraw[inked,fill=wooddk] (64,92) rectangle (74,156);
+\filldraw[inked,fill=wooddk] (166,92) rectangle (176,156);
+\filldraw[inked,fill=plum,rounded corners=2mm] (112,58) rectangle (128,80);
+\filldraw[inked,fill=gold] (114,52) circle [radius=7];
+\filldraw[inked,fill=pink] (127,50) circle [radius=6];
+\end{tikzpicture}
+\end{document}
